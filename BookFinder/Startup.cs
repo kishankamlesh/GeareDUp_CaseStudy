@@ -12,6 +12,7 @@ using BookFinder.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using BookFinder.Infra.Data.Context;
 
 namespace BookFinder
 {
@@ -32,6 +33,9 @@ namespace BookFinder
                     Configuration.GetConnectionString("LibraryUserDB")));
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+            services.AddDbContext<BookDBContext>(options =>
+            options.UseSqlServer(
+                Configuration.GetConnectionString("BookDBConnection")));
             services.AddControllersWithViews();
             services.AddRazorPages();
         }
@@ -43,7 +47,7 @@ namespace BookFinder
             {
                 app.UseDeveloperExceptionPage();
                 app.UseDatabaseErrorPage();
-            }
+            }   
             else
             {
                 app.UseExceptionHandler("/Home/Error");
