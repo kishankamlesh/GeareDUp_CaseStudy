@@ -15,9 +15,12 @@ namespace BookFinder.Apllication.Services
         {
             _bookRepository = bookRepository;
         }
-        public IEnumerable<BookViewModel> GetBooks()
+        public BookViewModel GetBooks()
         {
-            throw new NotImplementedException();
+            return new BookViewModel()
+            {
+                Books = _bookRepository.GetBooks()
+            };
         }
     }
 }

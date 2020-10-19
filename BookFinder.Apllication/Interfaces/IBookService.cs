@@ -7,6 +7,6 @@ namespace BookFinder.Apllication.Interfaces
 {
     public interface IBookService
     {
-        IEnumerable<BookViewModel> GetBooks();
+        BookViewModel GetBooks();
     }
 }
