@@ -13,6 +13,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using BookFinder.Infra.Data.Context;
+using BookFinder.Infra.IoC;
 
 namespace BookFinder
 {
@@ -38,6 +39,8 @@ namespace BookFinder
                 Configuration.GetConnectionString("BookDBConnection")));
             services.AddControllersWithViews();
             services.AddRazorPages();
+
+            RegisterServices(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -69,6 +72,10 @@ namespace BookFinder
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
+        }
+        private static void RegisterServices(IServiceCollection services)
+        {
+            DependencyContainer.RegisterServices(services);
         }
     }
 }

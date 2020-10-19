@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BookFinder.Infra.Data\BookFinder.Infra.Data.csproj" />
+    <ProjectReference Include="..\BookFinder.Infra.IoC\BookFinder.Infra.IoC.csproj" />
   </ItemGroup>
 
 </Project>

@@ -8,4 +8,9 @@
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.9" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BookFinder.Apllication\BookFinder.Apllication.csproj" />
+    <ProjectReference Include="..\BookFinder.Infra.Data\BookFinder.Infra.Data.csproj" />
+  </ItemGroup>
+
 </Project>
