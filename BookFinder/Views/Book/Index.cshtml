@@ -1,0 +1,33 @@
+﻿@model BookFinder.Apllication.ViewModels.BookViewModel
+
+    <div class="container body-content">
+        <div class="row book-details">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <td>ISBN</td>
+                        <td>Name</td>
+                        <td>Author Name</td>
+                        <td>Publisher Name</td>
+                        <td>Cost</td>
+                        <td>Description</td>
+                    </tr>
+                </thead>
+            </table>
+            @foreach(var bookData in Model.Books)
+            {
+                <div class="book-container">
+                    <table class="table table-striped">
+                        <tr>
+                            <td>@bookData.isbn </td>
+                            <td>@bookData.name </td>
+                            <td>@bookData.author </td>                            
+                            <td>@bookData.publisher </td>
+                            <td>@bookData.cost </td>
+                            <td>@bookData.descriptuon </td>
+                        </tr>
+                    </table>
+                </div>
+            }
+        </div>
+    </div>

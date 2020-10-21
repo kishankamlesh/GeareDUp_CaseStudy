@@ -17,11 +17,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookFinder.Domain", "BookFinder.Domain\BookFinder.Domain.csproj", "{A6EF8B97-4E6A-4EC9-9AFA-7C90319E6CE8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookFinder.Infra.Data", "BookFinder.Infra.Data\BookFinder.Infra.Data.csproj", "{F4669D7A-A6A3-4202-87D7-AB4A2AE201A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookFinder.Infra.Data", "BookFinder.Infra.Data\BookFinder.Infra.Data.csproj", "{F4669D7A-A6A3-4202-87D7-AB4A2AE201A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookFinder.Apllication", "BookFinder.Apllication\BookFinder.Apllication.csproj", "{F1FEA4F2-CA63-433B-BB88-8933B96CCD66}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookFinder.Application", "BookFinder.Apllication\BookFinder.Application.csproj", "{F1FEA4F2-CA63-433B-BB88-8933B96CCD66}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookFinder.Infra.IoC", "BookFinder.Infra.IoC\BookFinder.Infra.IoC.csproj", "{EB2C6E0A-E47F-4AE0-B87D-6C0F01B4F42B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookFinder.Infra.IoC", "BookFinder.Infra.IoC\BookFinder.Infra.IoC.csproj", "{EB2C6E0A-E47F-4AE0-B87D-6C0F01B4F42B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
