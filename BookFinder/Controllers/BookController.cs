@@ -18,7 +18,7 @@ namespace BookFinder.Controllers
         public IActionResult Index()
         {
             BookViewModel model = _bookService.GetBooks();
-            return View();
+            return View(model);
         }
     }
 }

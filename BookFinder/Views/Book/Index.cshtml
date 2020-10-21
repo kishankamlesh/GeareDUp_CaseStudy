@@ -1,9 +1,15 @@
 ﻿@model BookFinder.Apllication.ViewModels.BookViewModel
 
-    <div class="container body-content">
+    <div class="conatiner container-fluid">
+        <h4>Here is all we have in the Inventory!</h4>
+        <small>We hope we have what you're looking for!</small>
+        <br /><br />
+    </div>
+    
+   <div class="container body-content">
         <div class="row book-details">
             <table class="table table-striped">
-                <thead>
+                <thead class = "thead-dark">
                     <tr>
                         <td>ISBN</td>
                         <td>Name</td>
@@ -13,21 +19,28 @@
                         <td>Description</td>
                     </tr>
                 </thead>
-            </table>
-            @foreach(var bookData in Model.Books)
-            {
-                <div class="book-container">
-                    <table class="table table-striped">
+                <tbody>            
+                @foreach (var bookData in Model.Books)
+                {
+                    <div class="book-container">
+
                         <tr>
                             <td>@bookData.isbn </td>
                             <td>@bookData.name </td>
-                            <td>@bookData.author </td>                            
+                            <td>@bookData.author </td>
                             <td>@bookData.publisher </td>
                             <td>@bookData.cost </td>
                             <td>@bookData.descriptuon </td>
                         </tr>
-                    </table>
-                </div>
-            }
-        </div>
+
+                    </div>
+                }
+                </tbody>
+            </table>
+            </div>
+
     </div>
+   <br /><br />
+   <div class="conatiner container-fluid">
+       <h6>Be Sure to head over to our search page on the navbar if you're looking for something specfic or add a book to this library if you want to contribute!</h6>
+   </div>
