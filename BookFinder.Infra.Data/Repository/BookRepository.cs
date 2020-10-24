@@ -27,10 +27,17 @@ namespace BookFinder.Infra.Data.Repository
         }
         public List<Book> GetSearchResult(string keyword)
         {
+            if (!(String.IsNullOrEmpty(keyword)))
+            {
+                var reqBook = _ctx.Books.Where(b => b.name.Contains(keyword) || b.author.Contains(keyword)).ToList();
+                return reqBook;
+            }
 
-            var reqBook = _ctx.Books.Where(b => b.name.Contains(keyword) || b.author.Contains(keyword)).ToList();
+            else
+            {
+                return new List<Book>();
+            }
             
-            return reqBook;
         }
 
     }

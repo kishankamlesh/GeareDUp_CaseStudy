@@ -1,22 +1,32 @@
 ﻿@model BookFinder.Application.ViewModels.SearchBookViewModel;
 
+
+
+
+
 <div class="container container-fluid">
     <div class="container body-content">
         <div class="row book-details">
-            <table class="table table-striped">
-                <thead class="thead-dark">
-                    <tr>
-                        <td>ISBN</td>
-                        <td>Name</td>
-                        <td>Author Name</td>
-                        <td>Publisher Name</td>
-                        <td>Cost($)</td>
-                        <td>Description</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    @if (Model.SearchedBooks.Count != 0)
-                    {
+            @if (Model.SearchedBooks.Count != 0)
+            {
+                <div class="container container-fluid">
+                    <h4>Here is what we found!</h4>
+                    <small>We hope you found what you were looking for!</small>
+                    <br /><br />
+                </div>
+                <table class="table table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <td>ISBN</td>
+                            <td>Name</td>
+                            <td>Author Name</td>
+                            <td>Publisher Name</td>
+                            <td>Cost($)</td>
+                            <td>Description</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+
                         @foreach (var bookData in Model.SearchedBooks)
                         {
                             <tr>
@@ -30,17 +40,15 @@
 
 
                         }
-                    }
-                    @if (Model.SearchedBooks.Count == 0)
-                    {
-                        <p>Oops! Looks like we hit a brick wall there! No books or authors of the given search term were found! Wanna try again?</p>
-                    }
-
-
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
+            }
+            @if (Model.SearchedBooks.Count == 0)
+            {
+                <p>Oops! Looks like we hit a brick wall there! No books or authors of the given search term were found! Wanna try again?</p>
+            }
         </div>
 
     </div>
-    <h6>If no data is found you can add books to our library <a href="#">here</a></h6>
+    <h6>If no data is found you can add books to our library <a asp-controller="AddBook" asp-action="AddPage">here</a></h6>
 </div>
