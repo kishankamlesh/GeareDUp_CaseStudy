@@ -4,6 +4,7 @@ using BookFinder.Infra.Data.Context;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 
 namespace BookFinder.Infra.Data.Repository
 {
@@ -24,5 +25,13 @@ namespace BookFinder.Infra.Data.Repository
             _ctx.Books.Add(NewBook);
             _ctx.SaveChanges();
         }
+        public List<Book> GetSearchResult(string keyword)
+        {
+
+            var reqBook = _ctx.Books.Where(b => b.name.Contains(keyword) || b.author.Contains(keyword)).ToList();
+            
+            return reqBook;
+        }
+
     }
 }

@@ -9,5 +9,6 @@ namespace BookFinder.Domain.Interfaces
     {
         IEnumerable<Book> GetBooks();
         void AddBook(Book NewBook);
+        List<Book> GetSearchResult(string keyword);
     }
 }

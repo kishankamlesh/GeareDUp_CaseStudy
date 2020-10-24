@@ -18,6 +18,7 @@ namespace BookFinder.Infra.IoC
             //Application Layer
             services.AddScoped<IBookService, BookService>();
             services.AddScoped<IAddBook, AddBookService>();
+            services.AddScoped<ISearchBook, SearchBookService>();
 
             //infra.Data layer
             services.AddScoped<IBookRepository, BookRepository>();

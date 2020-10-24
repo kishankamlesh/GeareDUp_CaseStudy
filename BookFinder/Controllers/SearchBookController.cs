@@ -13,15 +13,21 @@ namespace BookFinder.Controllers
 {
     public class SearchBookController : Controller
     {
+        private ISearchBook _searchBook;
         
-        
-        public SearchBookController()
+        public SearchBookController(ISearchBook searchBook)
         {
-                        
+            _searchBook = searchBook;
         } 
         public IActionResult SearchPage()
         {
             return View();
+        }
+        [HttpPost]
+        public IActionResult SearchBook(string keyword)
+        {
+            SearchBookViewModel model = _searchBook.GetSearchResult(keyword);
+            return View(model);
         }
     }
 }

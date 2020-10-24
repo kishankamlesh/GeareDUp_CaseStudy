@@ -13,8 +13,7 @@ namespace BookFinder.Controllers
 {
     public class LibraryController : Controller
     {
-        private IBookService _bookService;
-        public IAddBook _addBook;
+        private IBookService _bookService;        
         public LibraryController(IBookService bookService)
         {
             _bookService = bookService;
