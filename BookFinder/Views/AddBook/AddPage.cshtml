@@ -1,35 +1,36 @@
 ﻿<div class="container container-fluid">
-    <form>
+    <form method="post" action ="/AddBook/AddBook">
         <div class="form-group">
             <label for="ISBN">ISBN:</label>
-            <input type="text" class="form-control" id="ISBN" aria-describedby="ISBNHelp">
+            <input type="text" name ="isbn"class="form-control" id="ISBN" aria-describedby="ISBNHelp">
             <small id="ISBNHelp" class="form-text text-muted">An ISBN is a textual string which uniquely identifies a publication.</small>
         </div>
         <div class="form-group">
             <label for="name">Book Name:</label>
-            <input type="text" class="form-control" id="" aria-describedby="BookName">
+            <input type="text" name ="name"class="form-control" id="name" aria-describedby="BookName">
             <small id="BookName" class="form-text text-muted">Name of the book you want to add to our library!</small>
         </div>
         <div class="form-group">
             <label for="Author">Author:</label>
-            <input type="text" class="form-control" id="Author" aria-describedby="AuthorHelp">
+            <input type="text" name ="author"class="form-control" id="Author" aria-describedby="AuthorHelp">
             <small id="AuthorHelp" class="form-text text-muted">Author of the publication</small>
         </div>
         <div class="form-group">
             <label for="Publisher">Publisher:</label>
-            <input type="text" class="form-control" id="Author" aria-describedby="PublisherHelp">
+            <input type="text" name ="publisher"class="form-control" id="Publisher" aria-describedby="PublisherHelp">
             <small id="PublisherHelp" class="form-text text-muted">Name of the publishing House</small>
         </div>
         <div class="form-group">
             <label for="Cost">Cost:</label>
-            <input type="number" class="form-control" id="Cost" aria-describedby="CostHelp">
+            <input type="number" name ="cost" class="form-control" id="Cost" aria-describedby="CostHelp">
             <small id="CostHelp" class="form-text text-muted">Price of the publication.</small>
         </div>
         <div class="form-group">
             <label for="Description">Description:</label>
-            <input type="text" class="form-control" id="Description" aria-describedby="descHelp">
+            <input type="text" name ="descriptuon" class="form-control" id="Description" aria-describedby="descHelp">
             <small id="dechHelp" class="form-text text-muted">A brief description of the publication to help our fellow users!</small>
         </div>
+        
         <button type="submit" class="btn btn-success">Submit</button>
     </form>
 </div>
