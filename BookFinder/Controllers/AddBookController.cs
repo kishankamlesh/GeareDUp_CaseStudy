@@ -28,7 +28,7 @@ namespace BookFinder.Controllers
         public IActionResult AddBook(Book newBook)
         {
             _addBook.AddBook(newBook);
-            return RedirectToAction("../Views/Library/Library");
+            return RedirectToAction("Library", "Library");
         }
     }
 }
