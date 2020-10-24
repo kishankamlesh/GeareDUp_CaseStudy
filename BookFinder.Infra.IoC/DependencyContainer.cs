@@ -1,5 +1,7 @@
 ﻿using BookFinder.Apllication.Interfaces;
 using BookFinder.Apllication.Services;
+using BookFinder.Application.Interfaces;
+using BookFinder.Application.Services;
 using BookFinder.Domain.Interfaces;
 using BookFinder.Infra.Data.Repository;
 using Microsoft.Extensions.DependencyInjection;
@@ -15,9 +17,11 @@ namespace BookFinder.Infra.IoC
         {
             //Application Layer
             services.AddScoped<IBookService, BookService>();
+            services.AddScoped<IAddBook, AddBookService>();
 
             //infra.Data layer
             services.AddScoped<IBookRepository, BookRepository>();
+
         }
     }
 }

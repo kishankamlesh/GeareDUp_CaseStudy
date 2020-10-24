@@ -22,8 +22,6 @@
                 <tbody>            
                 @foreach (var bookData in Model.Books)
                 {
-                    <div class="book-container">
-
                         <tr>
                             <td>@bookData.isbn </td>
                             <td>@bookData.name </td>
@@ -33,7 +31,7 @@
                             <td>@bookData.descriptuon </td>
                         </tr>
 
-                    </div>
+                    
                 }
                 </tbody>
             </table>

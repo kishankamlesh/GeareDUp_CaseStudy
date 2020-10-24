@@ -3,11 +3,10 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace BookFinder.Domain.Interfaces
+namespace BookFinder.Application.Interfaces
 {
-    public interface IBookRepository
+    public interface IAddBook
     {
-        IEnumerable<Book> GetBooks();
         void AddBook(Book NewBook);
     }
 }
