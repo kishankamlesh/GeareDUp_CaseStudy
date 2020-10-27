@@ -14,11 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BookFinder.Apllication\BookFinder.Application.csproj" />
-    <ProjectReference Include="..\BookFinder.Domain\BookFinder.Domain.csproj" />
     <ProjectReference Include="..\BookFinder.Infra.Data\BookFinder.Infra.Data.csproj" />
-    <ProjectReference Include="..\BookFinder.Infra.IoC\BookFinder.Infra.IoC.csproj" />
-    <ProjectReference Include="..\BookFinder\BookFinder.csproj" />
   </ItemGroup>
 
 </Project>
