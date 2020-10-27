@@ -23,6 +23,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookFinder.Application", "B
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookFinder.Infra.IoC", "BookFinder.Infra.IoC\BookFinder.Infra.IoC.csproj", "{EB2C6E0A-E47F-4AE0-B87D-6C0F01B4F42B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testing", "Testing", "{D56521FC-0534-449D-B9A0-3ECDD021246B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookFinder.UnitTest", "BookFinder.UnitTest\BookFinder.UnitTest.csproj", "{244125F5-66BE-4CC2-824D-E3E89EF3FE1C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +53,10 @@ Global
 		{EB2C6E0A-E47F-4AE0-B87D-6C0F01B4F42B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB2C6E0A-E47F-4AE0-B87D-6C0F01B4F42B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB2C6E0A-E47F-4AE0-B87D-6C0F01B4F42B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{244125F5-66BE-4CC2-824D-E3E89EF3FE1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{244125F5-66BE-4CC2-824D-E3E89EF3FE1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{244125F5-66BE-4CC2-824D-E3E89EF3FE1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{244125F5-66BE-4CC2-824D-E3E89EF3FE1C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -59,6 +67,7 @@ Global
 		{F4669D7A-A6A3-4202-87D7-AB4A2AE201A9} = {C2F1FEFB-8742-477B-8F7E-46BA748E57EB}
 		{F1FEA4F2-CA63-433B-BB88-8933B96CCD66} = {80BACCF6-88E4-4B36-89B9-E0362F830652}
 		{EB2C6E0A-E47F-4AE0-B87D-6C0F01B4F42B} = {64B284DC-78E9-45A1-A412-A96A1CC239C8}
+		{244125F5-66BE-4CC2-824D-E3E89EF3FE1C} = {D56521FC-0534-449D-B9A0-3ECDD021246B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DF229ED1-FC73-4A51-BF39-B79FF821A712}
