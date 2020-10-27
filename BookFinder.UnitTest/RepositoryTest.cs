@@ -63,9 +63,17 @@ namespace BookFinder.UnitTest
             string keyword = "Harry";
             //Act
             var result = testBook.GetSearchResult(keyword);
-
+            bool isSingleBook;
+            if (result.Count == 1)
+            {
+                isSingleBook = true;
+            }
+            else
+            {
+                isSingleBook = false;
+            }
             //Assert
-            Assert.IsInstanceOfType(result, typeof(List<Book>));
+            Assert.IsTrue(isSingleBook);
         }
         [TestMethod]
         public void GetSearchResults_ReturnsListOfBooks()
@@ -75,9 +83,17 @@ namespace BookFinder.UnitTest
             string keyword = "The";
             //Act
             var result = testBook.GetSearchResult(keyword);
-
+            bool isSingleBook;
+            if (result.Count == 1)
+            {
+                isSingleBook = true;
+            }
+            else
+            {
+                isSingleBook = false;
+            }
             //Assert
-            Assert.IsInstanceOfType(result, typeof(List<Book>));
+            Assert.IsFalse(isSingleBook);
         }
         [TestMethod]
         public void GetSearchResults_ReturnsEmptyList()
