@@ -39,11 +39,8 @@ namespace BookFinder.Infra.Data.Repository
                 else
                 {
                     return true;
-                }
-                
-            }
-            
-            
+                }                
+            }                        
         }
         public List<Book> GetSearchResult(string keyword)
         {
