@@ -5,6 +5,8 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Linq;
+using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
 
 namespace BookFinder.Infra.Data.Repository
 {
@@ -20,10 +22,28 @@ namespace BookFinder.Infra.Data.Repository
         {
             return _ctx.Books;
         }
-        public void AddBook(Book newBook)
+        public bool AddBook(Book newBook)
         {
-            _ctx.Books.Add(newBook);
-            _ctx.SaveChanges();
+            try
+            {
+                _ctx.Books.Add(newBook);
+                _ctx.SaveChanges();
+                return true;
+            }
+            catch(DbUpdateException ex)
+            {
+                if (ex.Entries.Count >= 0)
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+                
+            }
+            
+            
         }
         public List<Book> GetSearchResult(string keyword)
         {

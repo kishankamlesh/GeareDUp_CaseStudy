@@ -7,6 +7,6 @@ namespace BookFinder.Application.Interfaces
 {
     public interface IAddBook
     {
-        void AddBook(Book newBook);
+        public bool AddBook(Book newBook);
     }
 }

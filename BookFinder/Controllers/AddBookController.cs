@@ -29,8 +29,16 @@ namespace BookFinder.Controllers
         [HttpPost]
         public IActionResult AddBook(Book newBook)
         {
-            _addBook.AddBook(newBook);
-            return RedirectToAction("Library", "Library");
+            bool status = _addBook.AddBook(newBook);
+            if (status)
+            {
+                return RedirectToAction("Library", "Library");
+            }
+            else
+            {
+                return View("ErrorPage", "AddBook");
+            }
+            
         }
     }
 }

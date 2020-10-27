@@ -8,7 +8,7 @@ namespace BookFinder.Domain.Interfaces
     public interface IBookRepository
     {
         IEnumerable<Book> GetBooks();
-        void AddBook(Book newBook);
+        bool AddBook(Book newBook);
         List<Book> GetSearchResult(string keyword);
     }
 }
