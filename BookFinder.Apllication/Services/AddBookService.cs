@@ -15,9 +15,9 @@ namespace BookFinder.Application.Services
         {
             _bookRepository = bookRepository;
         }
-        public void AddBook(Book NewBook)
+        public void AddBook(Book newBook)
         {
-            _bookRepository.AddBook(NewBook);
+            _bookRepository.AddBook(newBook);
         }
     }
 }

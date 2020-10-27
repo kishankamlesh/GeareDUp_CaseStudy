@@ -20,9 +20,9 @@ namespace BookFinder.Infra.Data.Repository
         {
             return _ctx.Books;
         }
-        public void AddBook(Book NewBook)
+        public void AddBook(Book newBook)
         {
-            _ctx.Books.Add(NewBook);
+            _ctx.Books.Add(newBook);
             _ctx.SaveChanges();
         }
         public List<Book> GetSearchResult(string keyword)
